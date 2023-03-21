@@ -1,0 +1,7 @@
+{
+  "name": "CLAUSE-Ionic-Projet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
