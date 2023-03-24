@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ionic natif</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <ion-label>
+      le site va demander d'activer l'accès a la webcam et à la géolocalisation, je ne récupère aucune données ne vous inquietez pas , vous pouvez autoriser le navigateur.<br/>
+    </ion-label>
+    <ion-button [routerLink]="['/tabs/natif/photos']">Photos</ion-button><br/>
+    <ion-button [routerLink]="['/tabs/natif/geolocalisation']">Geolocalisation</ion-button><br/><br/>
+    <ion-label>
+      Pour la géolocalisation j'ai voulu utiliser le <a href ="https://ionicframework.com/docs/native/google-maps"> module natif ionic google map </a> mais il fallait un clef d'API qui coute un paquet d'argent, alors j'ai utilisé leaflet à la place.<br/>
+      la géolocalisation est potentiellement imprécise car les ordinateurs n'ont pas de super géolocalisateur, mais je crois que sur téléphone c'est super précis.
+    </ion-label>
+  </div>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Character edits</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="div-add-btn">
+    <ion-button color="success" shape="round" [routerLink]="['/tabs/edit/new']">
+      <ion-icon name="add-outline"></ion-icon>
+      New Character
+    </ion-button>  
+  </div>
+
+  <ion-item *ngFor="let personnage of personnages">
+    <ion-avatar>
+      <img [src]="personnage.face_url"> 
+    </ion-avatar>
+    <ion-label>{{personnage.name}}</ion-label>
+    <ion-button shape="round" color="warning" [routerLink]="['/tabs/edit',personnage.id]">
+      <ion-icon name="create-outline"></ion-icon>
+    </ion-button>
+    <ion-button shape="round" color="danger" (click)="deleteCharacterById(personnage.id)">
+      <ion-icon name="trash"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+</ion-content>

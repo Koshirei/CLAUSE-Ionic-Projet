@@ -1,0 +1,53 @@
+<ion-header *ngIf="personnage != null">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/characters"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{personnage.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="personnage != null" >
+  <ion-grid>
+    <ion-row>
+      <ion-title class="center">{{personnage.name}}</ion-title>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <ion-img src="{{personnage.face_url}}"></ion-img>
+      </ion-col>
+      <ion-col size="8">
+        <ion-text>
+          <div class="justify">
+            {{personnage.description}}
+          </div>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-title class="border_top">
+        Skill {{personnage.skill_name}} :
+      </ion-title>
+    </ion-row>
+    <ion-row>
+      <div [innerHTML]="personnage.skill_description"></div>
+    </ion-row>
+    <ion-row>
+      <ion-title class="border_top">
+        Metadata :
+      </ion-title>
+    </ion-row>
+    <ion-row>Rarity: {{personnage.rarity}}</ion-row>
+    <ion-row>Weapon: {{personnage.weapon}}</ion-row>
+    <ion-row>Class: {{personnage.class}}</ion-row>
+    <ion-row>Manufacturer: {{personnage.manufacturer}}</ion-row>
+    <ion-row>
+      <ion-title class="border_top">
+        Full picture :
+      </ion-title>
+    </ion-row>
+    <ion-row class="padding_bottom">
+      <ion-img src="{{personnage.full_picture_url}}"></ion-img>
+    </ion-row>
+  </ion-grid>
+</ion-content>

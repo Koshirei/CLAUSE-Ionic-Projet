@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/edit"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add a new character</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Character Name" [(ngModel)]="personnage.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Character description" [(ngModel)]="personnage.description"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-select [(ngModel)]="personnage.rarity" placeholder="Rarity">
+          <ion-select-option *ngFor="let rarity of raritylist" [value]="rarity">{{rarity}}
+          </ion-select-option>
+        </ion-select>
+        <ion-select [(ngModel)]="personnage.class" placeholder="Class" class="right-select">
+          <ion-select-option *ngFor="let class of classlist" [value]="class">{{class}}
+          </ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-select [(ngModel)]="personnage.manufacturer" placeholder="Manufacturer">
+        <ion-select-option *ngFor="let manufacturer of manufacturerlist" [value]="manufacturer">{{manufacturer}}
+        </ion-select-option>
+      </ion-select>
+      <ion-select [(ngModel)]="personnage.weapon" placeholder="Weapon" class="right-select">
+        <ion-select-option *ngFor="let weapon of weaponlist" [value]="weapon">{{weapon}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="personnage.skill_name" placeholder="Skill Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="personnage.skill_description" placeholder="Skill Description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="personnage.face_url" placeholder="URL of character face small squared image"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="personnage.full_picture_url" placeholder="URL of character full body image"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="bottom">
+    <ion-button color="success" (click)="add2db()">Add the character to database</ion-button>
+    <p>Images disponible sur le repo <a href="https://github.com/nikke-db/nikke-db.github.io" target="_blank">ici présent</a><br/>
+      ( dossier images, Icone dans le sous dossier "sprite", photo complète dans le dossier "FB")<br/>( URL accessible sur "https://nikke-db.github.io/images/(FB ou sprite)/&lt;nomImage.png&gt;")</p>
+  </div>
+
+</ion-content>
