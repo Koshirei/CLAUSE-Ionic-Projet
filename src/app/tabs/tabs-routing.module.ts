@@ -23,6 +23,11 @@ const routes: Routes = [
       {
         path:'natif',
         loadChildren: () => import('../natif/natif.module').then(m => m.NatifPageModule)
+      },
+      {
+        path:'',
+        redirectTo: '/tabs/home',
+        pathMatch: 'full'
       }
     ]
   },
