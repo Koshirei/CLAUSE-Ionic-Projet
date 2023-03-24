@@ -1,3 +1,5 @@
+Clause Axel
+
 CRUD firestore sous ionic, avec deux features natives ( appareil photo, géolocalisation + leaflet )
 
 ---
@@ -5,6 +7,7 @@ CRUD firestore sous ionic, avec deux features natives ( appareil photo, géoloca
 git clone, npm i, ionic serve.     
 
 Si la home page apparait pas il faut aller sur localhost:8100/tabs/home
+
 ---
 
 angular CLI 12.2.18   
